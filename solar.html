@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("assets/solar\ bg\ image.png");
+            background-size: cover;
+        }
+
+        .common {
+            position: absolute;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: solar;
+        }
+
+        .sun {
+            background-image: url("assets/sun.png");
+            height: 200px;
+            width: 200px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 350px;
+            left: 800px;
+            position: relative;
+        }
+
+        .merquery {
+            background-image: url("assets/merquery.png");
+            height: 100px;
+            width: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 30px;
+            right: -100px;
+            transform-origin: -100px;
+            animation-duration: 3s;
+        }
+        .venus{
+            background-image: url("assets/venus.png");
+            height: 100px;
+            width: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 30px;
+            right: -150px;
+            animation-duration: 4s;
+            transform-origin: -150px;    
+           }
+           .earth{
+            background-image: url("assets/earth.png");
+            height: 100px;
+            width: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 30px;
+            right: -350px;
+            animation-duration: 5s;
+            transform-origin: -350px;
+           }
+           .moon{
+            height: 40px;
+            width:40px;
+            background-color: white;
+            border-radius: 50%;
+            top:20px;
+            right: -40px;
+            animation-duration: 2s;
+            transform-origin: -60px;
+           }
+
+        @keyframes solar{
+            0% {
+                transform: rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateZ(359deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun">
+        <div class="common merquery"></div>
+        <div class="common venus"></div>
+        <div class="common earth">
+            <div class="common moon"></div>
+        </div>
+    </div>
+</body>
+
+</html>
